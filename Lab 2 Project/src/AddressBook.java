@@ -18,14 +18,14 @@ public class AddressBook {
 
     public void printBuddyInfo(String name){
         if(book.containsKey(name))
-            System.out.printf("Searching address book for %s.\nName: %s\nAge:%d\n", name, book.get(name).getName(), book.get(name).getAge());
+            System.out.printf("Name: %s\nAddress:%s\nPhone Number:%s\n", name, book.get(name).getAddress(), book.get(name).getPhoneNumber());
         else
-            System.out.println("\nBuddy doesn't exit.");
+            System.out.println("\nBuddy doesn't exist.\n");
     }
 
     public static void main(String[] args){
-        BuddyInfo bob = new BuddyInfo("Bob", 21);
-        BuddyInfo jim = new BuddyInfo("Jim", 23);
+        BuddyInfo bob = new BuddyInfo("Bob", "Carleton", "385-789-3129");
+        BuddyInfo jim = new BuddyInfo("Jim", "uOttawa", "412-567-2342");
 
         AddressBook addBook = new AddressBook();
         addBook.addBuddy(bob);
